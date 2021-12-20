@@ -22,10 +22,10 @@ tim1 = time.localtime(time.time())
 start = time.time()
 
 
-aa = input()
+aa = st.number_input
 while aa not in ['1','2','3']:
     st.write(输入错误)
-    aa = input()
+    aa = st.number_input
 else :
     aa = int(aa)
     if aa == 1:
@@ -47,10 +47,10 @@ for k,v in train.items():
     ans = random.randint(0,3)
     choice[ans] = v
     st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
-    inpt = input()
+    inpt = st.number_input
     while inpt not in ['1','2','3','4']:
         st.write(输入错误)
-        inpt = input()
+        inpt = st.number_input
     inpt = int(inpt)
     if inpt == ans+1:
         st.write('正确')
