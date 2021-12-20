@@ -22,7 +22,7 @@ tim1 = time.localtime(time.time())
 start = time.time()
 
 
-aa = st.number_input('Please input 1, 2, 3')
+aa = st.text_input('Please input 1, 2, 3', '1')
 comfirm_input = st.button('輸入確認')
 if comfirm_input:
     while aa not in ['1','2','3']:
