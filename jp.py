@@ -40,34 +40,34 @@ if comfirm_input:
     st.write(info2)
     count = 0
 
-for k,v in train.items():
-    st.write('\n',k,'的读音：')
-    m = yin[:yin.index(v)]+(yin[yin.index(v)+1:])
-    choice = []
-    for i in range(4):
-        choice.append(m[random.randint(0,44)])
-    ans = random.randint(0,3)
-    choice[ans] = v
-    st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
-    inpt = st.number_input
-    while inpt not in ['1','2','3','4']:
-        st.write(输入错误)
+    for k,v in train.items():
+        st.write('\n',k,'的读音：')
+        m = yin[:yin.index(v)]+(yin[yin.index(v)+1:])
+        choice = []
+        for i in range(4):
+            choice.append(m[random.randint(0,44)])
+        ans = random.randint(0,3)
+        choice[ans] = v
+        st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
         inpt = st.number_input
-    inpt = int(inpt)
-    if inpt == ans+1:
-        st.write('正确')
-        count += 1;
-    else:
-        st.write('错误，正确答案为：',ans+1,choice[ans])
+        while inpt not in ['1','2','3','4']:
+            st.write(输入错误)
+            inpt = st.number_input
+        inpt = int(inpt)
+        if inpt == ans+1:
+            st.write('正确')
+            count += 1;
+        else:
+            st.write('错误，正确答案为：',ans+1,choice[ans])
 
-finish = time.time()
-st.write('\n恭喜，完成一次训练，正确率：',count,'/',92 if aa==3 else 46 )
-st.write('用时：%.2f 秒\n' % (finish-start))
+    finish = time.time()
+    st.write('\n恭喜，完成一次训练，正确率：',count,'/',92 if aa==3 else 46 )
+    st.write('用时：%.2f 秒\n' % (finish-start))
 
-with open (filename,'a') as f:
-    f.write(time.strftime('%Y-%m-%d-%H %I:%M',tim1))
-    f.write('\n     正确率：')
-    f.write(str(count))
-    f.write('/')
-    f.write(str(92 if aa==3 else 46))
-    f.write('    用时：%.2f 秒\n' % (finish-start))
+    with open (filename,'a') as f:
+        f.write(time.strftime('%Y-%m-%d-%H %I:%M',tim1))
+        f.write('\n     正确率：')
+        f.write(str(count))
+        f.write('/')
+        f.write(str(92 if aa==3 else 46))
+        f.write('    用时：%.2f 秒\n' % (finish-start))
