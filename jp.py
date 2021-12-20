@@ -22,21 +22,23 @@ tim1 = time.localtime(time.time())
 start = time.time()
 
 
-aa = st.number_input
-while aa not in ['1','2','3']:
-    st.write(输入错误)
-    aa = st.number_input
-else :
-    aa = int(aa)
-    if aa == 1:
-        train = {x:y for x,y in zip(ping, yin)}
-    elif aa == 2:
-        train = {x:y for x,y in zip(pian, yin)}
+aa = st.number_input('Please input 1, 2, 3')
+comfirm_input = st.button('輸入確認')
+if comfirm_input:
+    while aa not in ['1','2','3']:
+        st.write(输入错误)
+        aa = st.number_input
     else :
-        train = {x:y for x,y in zip(ping, yin)}
-        train.update({x:y for x,y in zip(pian, yin)})
-st.write(info2)
-count = 0
+        aa = int(aa)
+        if aa == 1:
+            train = {x:y for x,y in zip(ping, yin)}
+        elif aa == 2:
+            train = {x:y for x,y in zip(pian, yin)}
+        else :
+            train = {x:y for x,y in zip(ping, yin)}
+            train.update({x:y for x,y in zip(pian, yin)})
+    st.write(info2)
+    count = 0
 
 for k,v in train.items():
     st.write('\n',k,'的读音：')
