@@ -38,7 +38,6 @@ if comfirm_input:
             train = {x:y for x,y in zip(ping, yin)}
             train.update({x:y for x,y in zip(pian, yin)})
     st.write(info2)
-    comfirm_input = st.button('輸入確認')
     count = 0
 
     for k,v in train.items():
@@ -51,6 +50,7 @@ if comfirm_input:
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
         inpt = st.number_input
+        comfirm_input = st.button('輸入確認')
         while inpt not in ['1','2','3','4']:
             st.write(输入错误)
             inpt = st.number_input
