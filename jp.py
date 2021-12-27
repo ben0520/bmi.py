@@ -27,9 +27,7 @@ comfirm_input = st.button('輸入確認')
 if comfirm_input:
     while aa not in ['1','2','3']:
         st.write(输入错误)
-        comfirm_input = st.button('輸入確認')
         aa = st.number_input
-        comfirm_input = st.button('輸入確認')
     else :
         aa = int(aa)
         if aa == 1:
