@@ -25,6 +25,7 @@ start = time.time()
 aa = st.text_input('Please input 1, 2, 3', '0')
 comfirm_input = st.button('輸入確認')
 if comfirm_input:
+    comfirm_input=0
     while aa not in ['1','2','3']:
         st.write(输入错误)
         aa = st.number_input
@@ -50,19 +51,21 @@ if comfirm_input:
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
         inpt = st.text_input('Please input 1, 2, 3, 4', '0')
-        comfirm_input = st.button('確認')
-        if comfirm_input:
-            comfirm_input=0
+        comfirm_input2 = st.button('確認')
+        if comfirm_input2:
+            comfirm_input2=0
             while inpt not in ['1','2','3','4']:
                 st.write(输入错误)
                 inpt = st.text_input('Please input 1, 2, 3, 4', '0')
                 inpt = int(inpt)
-                comfirm_input = st.button('輸入確認')
-                if inpt == ans+1:
-                    st.write('正确')
-                    count += 1;
-                else:
-                    st.write('错误，正确答案为：',ans+1,choice[ans])
+                comfirm_input3 = st.button('輸入確認')
+                if comfirm_input3:
+                    comfirm_input3=0
+                    if inpt == ans+1:
+                        st.write('正确')
+                        count += 1;
+                    else:
+                        st.write('错误，正确答案为：',ans+1,choice[ans])
 
             finish = time.time()
             st.write('\n恭喜，完成一次训练，正确率：',count,'/',92 if aa==3 else 46 )
