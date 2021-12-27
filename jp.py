@@ -52,6 +52,7 @@ if comfirm_input:
         inpt = st.text_input('Please input 1, 2, 3, 4', '0')
         comfirm_input = st.button('確認')
         if comfirm_input:
+            comfirm_input=0
             while inpt not in ['1','2','3','4']:
                 st.write(输入错误)
                 inpt = st.text_input('Please input 1, 2, 3, 4', '0')
