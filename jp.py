@@ -40,7 +40,7 @@ if comfirm_input:
             train.update({x:y for x,y in zip(pian, yin)})
     st.write(info2)
     count = 0
-
+    
     for k,v in train.items():
         st.write('\n',k,'的读音：')
         m = yin[:yin.index(v)]+(yin[yin.index(v)+1:])
@@ -57,7 +57,7 @@ if comfirm_input:
             while inpt not in ['1','2','3','4']:
                 st.write(输入错误)
                 inpt = st.text_input('Please input 1, 2, 3, 4', '0')
-                inpt = int(inpt)
+            inpt = int(inpt)
                 comfirm_input3 = st.button('輸入確認')
                 if comfirm_input3:
                     comfirm_input3=0
