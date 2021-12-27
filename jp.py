@@ -48,7 +48,7 @@ if comfirm_input:
             choice.append(m[random.randint(0,44)])
         ans = random.randint(0,3)
         choice[ans] = v
-        st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
+        st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3]')
         inpt = st.text_input('Please input 1, 2, 3, 4', '0')
         comfirm_input = st.button('輸入確認')
         if comfirm_input:
