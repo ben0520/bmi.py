@@ -59,13 +59,13 @@ if comfirm_input:
                 inpt = st.text_input('Please input 1, 2, 3, 4', '0')
                 inpt = int(inpt)
                 comfirm_input3 = st.button('輸入確認')
-                if comfirm_input3:
-                    comfirm_input3=0
-                    if inpt == ans+1:
-                        st.write('正确')
-                        count += 1;
-                    else:
-                        st.write('错误，正确答案为：',ans+1,choice[ans])
+            if comfirm_input3:
+                comfirm_input3=0
+                if inpt == ans+1:
+                    st.write('正确')
+                    count += 1;
+                else:
+                    st.write('错误，正确答案为：',ans+1,choice[ans])
 
             finish = time.time()
             st.write('\n恭喜，完成一次训练，正确率：',count,'/',92 if aa==3 else 46 )
