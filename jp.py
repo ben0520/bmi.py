@@ -41,7 +41,6 @@ if comfirm_input:
             train.update({x:y for x,y in zip(pian, yin)})
     st.write(info2)
     count = 0
-    comfirm_input = st.button('輸入確認')
 
     for k,v in train.items():
         st.write('\n',k,'的读音：')
