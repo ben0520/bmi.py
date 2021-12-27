@@ -53,11 +53,13 @@ if comfirm_input:
         inpt = st.text_input('Please input 1, 2, 3, 4', '0')
         comfirm_input2 = st.button('確認')
         if comfirm_input2:
+            comfirm_input2=0
             while inpt not in ['1','2','3','4']:
                 st.write(输入错误)
                 inpt = st.text_input('Please input 1, 2, 3, 4', '0')
                 comfirm_input3 = st.button('輸入確認')
-                if comfirm_input3:  
+                if comfirm_input3:
+                    comfirm_input3=0
                 inpt = int(inpt)
             if inpt == ans+1:
                 st.write('正确')
