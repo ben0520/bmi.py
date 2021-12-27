@@ -40,6 +40,7 @@ if comfirm_input:
             train = {x:y for x,y in zip(ping, yin)}
             train.update({x:y for x,y in zip(pian, yin)})
     st.write(info2)
+    comfirm_input = st.button('輸入確認')
     count = 0
 
     for k,v in train.items():
