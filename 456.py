@@ -19,4 +19,8 @@ for k,v in train.items():
         ans = random.randint(0,3)
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
+        color = st.select_slider(
+     'Select a color of the rainbow',
+     options=['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'])
+st.write('My favorite color is', color)
         
