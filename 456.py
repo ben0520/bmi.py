@@ -19,15 +19,17 @@ for k,v in train.items():
         ans = random.randint(0,3)
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
+        
+inpt = input()
 while inpt not in ['1','2','3','4']:
     st.write(输入错误)
     inpt = int(inpt)
-    if inpt == ans+1:
-        st.write('正确')
-        count += 1;
+if inpt == ans+1:
+    st.write('正确')
+    count += 1;
         
-    else:
-        st.write('错误，正确答案为：',ans+1,choice[ans])
+else:
+    st.write('错误，正确答案为：',ans+1,choice[ans])
         
         
         
