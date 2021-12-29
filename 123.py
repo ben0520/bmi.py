@@ -20,6 +20,9 @@ for k,v in train.items():
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
         inpt = st.text_input('Please input 1, 2, 3, 4', '0')
+        comfirm_input = st.button('確認')
+        if comfirm_input:
+            comfirm_input=0        
         while inpt not in ['1','2','3','4']:
                 st.write(输入错误)
                 inpt = int(inpt)
@@ -28,10 +31,7 @@ for k,v in train.items():
                 count += 1;
             else:
                 st.write('错误，正确答案为：',ans+1,choice[ans])
-        comfirm_input = st.button('確認')
-        if comfirm_input:
-            comfirm_input=0        
-            
+                
             finish = time.time()
             st.write('\n恭喜，完成一次训练，正确率：',count,'/',46)
             st.write('用时：%.2f 秒\n' % (finish-start))
