@@ -20,7 +20,8 @@ for k,v in train.items():
         choice[ans] = v
         st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
 
-a = st.text_input('請輸入答案？', '0')       
+a = st.text_input('請輸入答案？', '0')
+b = st.text_input('請輸入答案？', '0')
 comfirm_input = st.button('輸入確認')
 if comfirm_input:
     inpt = input()
