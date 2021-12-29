@@ -22,12 +22,12 @@ for k,v in train.items():
         while inpt not in ['1','2','3','4']:
             st.write(输入错误)
             inpt = int(inpt)
-        if inpt == ans+1:
-            st.write('正确')
-            count += 1;
+            if inpt == ans+1:
+                st.write('正确')
+                count += 1;
         
-        else:
-            st.write('错误，正确答案为：',ans+1,choice[ans])
+            else:
+                st.write('错误，正确答案为：',ans+1,choice[ans])
         
         
         
