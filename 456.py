@@ -10,9 +10,9 @@ answer = st.text_input('Please input 音標', 'a')
 comfirm_input = st.button('確認')
 if comfirm_input:
     if answer == ans :
-        print('正确')
+        st.write('正确')
     else:
-        print('错误')
+        st.write('错误')
                 
                 
 
