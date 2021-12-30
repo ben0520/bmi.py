@@ -6,29 +6,19 @@ def state():
 st.write(state(),'的读音：')
 
 for key, value in dict.items():
-        
-        k = [random.randint(0,44)]
-        m = yin[:yin.index(v)]+(yin[yin.index(v)+1:])
-        choice = []
-        for i in range(4):
-            choice.append(m[random.randint(0,44)])
-        ans = random.randint(0,3)
-        choice[ans] = v
-        st.write('1:',choice[0],'   2:',choice[1],'   3:',choice[2],'   4:',choice[3])
-
-a = st.text_input('請輸入答案(a)？', '0')
-b = st.number_input('請輸入答案？(b)', '0')
+answer = st.text_input('請輸入答案(a)？', '0')
 comfirm_input = st.button('輸入確認')
 if comfirm_input:
-    inpt = input()
-    while inpt not in ['1','2','3','4']:
-        st.write(输入错误)
-    inpt = int(inpt)
-    if inpt == ans+1:
-        st.write('正确')
-        count += 1;     
-    else:
-        st.write('错误，正确答案为：',ans+1,choice[ans])      
+    if answer == value :
+      print('正确')
+  else:
+      print('错误')
+
+        
+        
+
+
+
         
         
 
