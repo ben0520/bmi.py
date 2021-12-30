@@ -6,7 +6,7 @@ def state():
     value=state()
     st.write(value,'的读音：')
     ans=dict[value]
-    answer = st.text_input('Please input '音標', 'a')
+    answer = st.text_input('Please input 音標', 'a')
     comfirm_input = st.button('確認')
     if comfirm_input:
         if answer == ans :
