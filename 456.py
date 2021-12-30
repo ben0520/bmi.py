@@ -1,14 +1,14 @@
 import streamlit as st
 import random
-import time
-ping = ['a あ', 'b い', 'c う', 'd え', 'e お', 'f か', 'g き', 'h く', 'i け', 'j こ', 'k さ', 'l し', 'm す', 'n せ', 'o そ', 'p た', 'q ち', 'r つ', 's て', 't と', 'u な', 'v に', 'w ぬ', 'x ね', 'y の', 'z は', 'A ひ', 'B ふ', 'C へ', 'D ほ', 'E ま', 'F み', 'G む', 'H め', 'I も', 'J や', 'K ゆ', 'L よ', 'M ら', 'N り', 'O る', 'P れ', 'Q ろ', 'R わ', 'S を', 'T ん']
-yin = ['a', 'i', 'u', 'e', 'o', 'ka', 'ki', 'ku', 'ke', 'ko', 'sa', 'si/shi', 'su', 'se', 'so', 'ta', 'ti/chi', 'tu/tsu', 'te', 'to', 'na', 'ni', 'nu', 'ne', 'no', 'ha', 'hi', 'hu/fu', 'he', 'ho', 'ma', 'mi', 'mu', 'me', 'mo', 'ya', 'yu', 'yo', 'ra', 'ri', 'ru', 're', 'ro', 'wa', 'wo','n']
+from random import choice
+def state():
+  dict = {'あ':'a', 'い':'i', 'う':'u', 'え':'e', 'お':'o', 'か':'ka', 'き':'ki', 'く':'ku', 'け':'ke', 'こ':'ko', 'さ':'sa', 'し':'si/shi', 'す':'su', 'せ':'se', 'そ':'so', 'た':'ta', 'ち':'ti/chi', 'つ':'tu/tsu', 'て':'te', 'と':'to', 'な':'na', 'に':'ni', 'ぬ':'nu', 'ね':'ne', 'の':'no', 'は':'ha', 'ひ':'hi', 'ふ':'hu/fu', 'へ':'he', 'ほ':'ho', 'ま':'ma', 'み':'mi', 'む':'mu', 'め':'me', 'も':'mo', 'や':'ya', 'ゆ':'yu', 'よ':'yo', 'ら':'ra', 'り':'ri', 'る':'ru', 'れ':'re', 'ろ':'ro', 'わ':'wa', 'を':'wo', 'ん':'n'}
+    return choice(dict)
+st.write(state(),'的读音：')
 
-train = {x:y for x,y in zip(ping, yin)}
-
-
-for k,v in train.items():
-        st.write('\n',k,'的读音：')
+for key, value in dict.items():
+        
+        k = [random.randint(0,44)]
         m = yin[:yin.index(v)]+(yin[yin.index(v)+1:])
         choice = []
         for i in range(4):
