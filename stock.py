@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.graph_objs as go
+
 from stock import stock
 #stock是我自己寫的一個小小的股票爬蟲，有需要可以去github上面看
 from datetime import datetime
