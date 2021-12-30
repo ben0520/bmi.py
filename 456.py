@@ -11,8 +11,8 @@ for key, value in dict.items():
     if comfirm_input:
         if value == answer:
             print('正确')
-        else:
-            print('错误')
+            else:
+                print('错误')
 
         
         
