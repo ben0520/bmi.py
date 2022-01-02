@@ -6,17 +6,20 @@ def state():
 value=state()
 st.write(value,'的读音：')
 
+
+answer = st.sidebar.text_input('Please input 音標', 'a')
+comfirm_input = st.button('確認')
+if comfirm_input:
  
-if submit_button:
-    for i in range(4):
+    if submit_button:
+        for i in range(4):
         ans+=str(dict[i])
-    st.session_state.answer=ans
+        st.session_state.answer=ans
         ans=dict[value]
-    answer = st.sidebar.text_input('Please input 音標', 'a')
-    comfirm_input = st.button('確認')
-    if comfirm_input:
+    
+   
         if number==st.session_state.answer:
-           st.write('正确')
+            st.write('正确')
         else:
             st.write('错误')
                 
