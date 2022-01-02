@@ -1,48 +1,57 @@
-b = st.text_input('請輸入答案？', '0')
-c = st.text_input('請輸入答案？', '0')
-d = st.text_input('請輸入答案？', '0')
-e = st.text_input('請輸入答案？', '0')
-f = st.text_input('請輸入答案？', '0')
-g = st.text_input('請輸入答案？', '0') 
-h = st.text_input('請輸入答案？', '0')
-i = st.text_input('請輸入答案？', '0')
-j = st.text_input('請輸入答案？', '0')
-k = st.text_input('請輸入答案？', '0')
-l = st.text_input('請輸入答案？', '0')
-m = st.text_input('請輸入答案？', '0')
-n = st.text_input('請輸入答案？', '0')
-o = st.text_input('請輸入答案？', '0')
-p = st.text_input('請輸入答案？', '0')
-q = st.text_input('請輸入答案？', '0')
-r = st.text_input('請輸入答案？', '0')
-s = st.text_input('請輸入答案？', '0')
-t = st.text_input('請輸入答案？', '0')
-u = st.text_input('請輸入答案？', '0')
-v = st.text_input('請輸入答案？', '0')
-w = st.text_input('請輸入答案？', '0')
-x = st.text_input('請輸入答案？', '0')
-y = st.text_input('請輸入答案？', '0')
-z = st.text_input('請輸入答案？', '0')
-A = st.text_input('請輸入答案？', '0')
-B = st.text_input('請輸入答案？', '0')
-C = st.text_input('請輸入答案？', '0')
-D = st.text_input('請輸入答案？', '0')
-E = st.text_input('請輸入答案？', '0')
-F = st.text_input('請輸入答案？', '0')
-G = st.text_input('請輸入答案？', '0')
-H = st.text_input('請輸入答案？', '0')
-I = st.text_input('請輸入答案？', '0')
-J = st.text_input('請輸入答案？', '0')
-K = st.text_input('請輸入答案？', '0')
-L = st.text_input('請輸入答案？', '0')
-M = st.text_input('請輸入答案？', '0')
-N = st.text_input('請輸入答案？', '0')
-O = st.text_input('請輸入答案？', '0')
-P = st.text_input('請輸入答案？', '0')
-Q = st.text_input('請輸入答案？', '0')
-R = st.text_input('請輸入答案？', '0')
-S = st.text_input('請輸入答案？', '0')
-T = st.text_input('請輸入答案？', '0')
-comfirm_input3 = st.button('輸入確認')
-if comfirm_input:
-    comfirm_input=0        
+import random 
+2 import streamlit as st 
+3 
+ 
+4 st.title('1A2B game') 
+5 st.markdown(""" 
+6 大家應該都有玩過這個猜數字的遊戲吧， 
+7  
+8 A 代表的是：數字猜對位子也對。 
+9  
+10 B 代表的是：數字對了，但是位子不對。 
+11  
+12 0～9會隨機抽出不重複的四位數字，準備好就開始吧  
+13 """) 
+14 st.title('👇👇') 
+15 
+ 
+16 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 
+17 random.shuffle(items) 
+18 #st.write(answer) 
+19 
+ 
+20 answer='' 
+21 
+ 
+22 a_count=0 # initial A count 
+23 b_count=0 # initial B count 
+24 
+ 
+25 submit_button = st.button(label='開始遊戲')    
+26 if submit_button: 
+27     for i in range(4): 
+28         answer+=str(items[i]) 
+29     st.session_state.answer=answer 
+30 
+ 
+31 number=st.sidebar.text_input('請輸入數字') 
+32 #while(True): 
+33     #number=st.text_input('Enter the number: ') 
+34 #st.write(st.session_state.answer) 
+35 if not number.isdigit():  #cheak all input is digit 
+36     pass 
+37 else: 
+38     if number==st.session_state.answer: 
+39         st.write('好棒棒！你猜對了') 
+40         #break 
+41     for i in range(4): 
+42         #st.session_state(st.session_state.answer) 
+43         for j in range(4): 
+44             if i==j and number[i]==st.session_state.answer[j]: 
+45                 a_count+=1 
+46             elif number[i]==st.session_state.answer[j]: 
+47                 b_count+=1 
+48             #    st.session_state(answer) 
+49     st.write(a_count, 'A', b_count, 'B') 
+50     a_count=0 
+51     b_count=0 
