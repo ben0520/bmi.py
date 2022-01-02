@@ -7,21 +7,18 @@ value=state()
 st.write(value,'的读音：')
 
 
-answer = st.sidebar.text_input('Please input 音標', 'a')
-comfirm_input = st.button('確認')
-if comfirm_input:
- 
-    if submit_button:
-        for i in range(4):
-        ans+=str(dict[i])
-        st.session_state.answer=ans
-        ans=dict[value]
-    
-   
-        if number==st.session_state.answer:
-            st.write('正确')
-        else:
-            st.write('错误')
+
+submit_button = st.button(label='開始遊戲')    
+if submit_button: 
+     for i in dict: 
+         value+=str(dict[i]) 
+     st.session_state.answer=value 
+     ans=st.sidebar.text_input('Please input 音標', 'a') 
+     ans=dict[value]
+     if ans==st.session_state.answer:
+             st.write('正确')
+         else:
+             st.write('错误')
                 
                 
 
