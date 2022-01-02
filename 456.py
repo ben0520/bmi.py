@@ -5,17 +5,19 @@ def state():
     return random.choice(list(dict))
 value=state()
 st.write(value,'的读音：')
+
 submit_button = st.button(label='開始遊戲')   
 if submit_button:
     for i in range(4):
-        answer+=str(items[i])
-    st.session_state.answer=answer
+        value+=str(items[i])
+    st.session_state.answer=value
+ 
     ans=dict[value]
     answer = st.text_input('Please input 音標', 'a')
     comfirm_input = st.button('確認')
     if comfirm_input:
         if answer == ans :
-            st.write('正确')
+           st.write('正确')
         else:
             st.write('错误')
                 
