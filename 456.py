@@ -9,16 +9,13 @@ st.write(value,'的读音：')
  
 if submit_button:
     for i in range(4):
-        value+=str(dict[i])
-    st.session_state.answer=value
- 
-number=st.sidebar.text_input('請輸入數字')
-   
+        ans+=str(dict[i])
+    st.session_state.answer=ans
     ans=dict[value]
-    answer = st.text_input('Please input 音標', 'a')
+    answer = st.sidebar.text_input('Please input 音標', 'a')
     comfirm_input = st.button('確認')
     if comfirm_input:
-        if answer == ans :
+        if number==st.session_state.answer:
            st.write('正确')
         else:
             st.write('错误')
