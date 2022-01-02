@@ -11,7 +11,7 @@ if submit_button:
      for i in dict: 
          value+=str(dict[i]) 
      st.session_state.answer=value 
-     ans=st.sidebar.text_input('Please input 音標') 
+     ans=st.text_input('Please input 音標', 'a') 
      
      if ans==st.session_state.answer:
          st.write('正确')
