@@ -5,13 +5,13 @@ def state():
     return random.choice(list(dict))
 value=state()
 st.write(value,'的读音：')
-
+ans=st.text_input('Please input 音標', 'a')
 submit_button = st.button(label='開始遊戲')    
 if submit_button: 
      for i in dict: 
          value+=str(dict[i]) 
      st.session_state.answer=value 
-     ans=st.text_input('Please input 音標', 'a') 
+     
      
      if ans==st.session_state.answer:
          st.write('正确')
