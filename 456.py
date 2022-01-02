@@ -6,12 +6,14 @@ def state():
 value=state()
 st.write(value,'的读音：')
 
-submit_button = st.button(label='開始遊戲')   
+ 
 if submit_button:
     for i in range(4):
-        value+=str(items[i])
+        value+=str(dict[i])
     st.session_state.answer=value
  
+number=st.sidebar.text_input('請輸入數字')
+   
     ans=dict[value]
     answer = st.text_input('Please input 音標', 'a')
     comfirm_input = st.button('確認')
