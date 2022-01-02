@@ -6,19 +6,20 @@ def state():
 value=state()
 st.write(value,'的读音：')
 
-
-
 submit_button = st.button(label='開始遊戲')    
 if submit_button: 
      for i in dict: 
          value+=str(dict[i]) 
      st.session_state.answer=value 
      ans=st.sidebar.text_input('Please input 音標', 'a') 
-     ans=dict[value]
+     
      if ans==st.session_state.answer:
          st.write('正确')
      else:
          st.write('错误')
+            
+            
+ 
                 
                 
 
