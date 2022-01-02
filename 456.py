@@ -11,7 +11,7 @@ if submit_button:
     for i in range(4):
         ans+=str(dict[i])
     st.session_state.answer=ans
-    ans=dict[value]
+        ans=dict[value]
     answer = st.sidebar.text_input('Please input 音標', 'a')
     comfirm_input = st.button('確認')
     if comfirm_input:
