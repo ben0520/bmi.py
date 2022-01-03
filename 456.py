@@ -14,10 +14,10 @@ if submit_button:
 
 ans=st.sidebar.text_input('Please input 音標', 'a')     
      
-if ans==st.session_state.answer:
-    st.write('正确')
-else:
-    st.write('错误')
+    if ans==st.session_state.answer:
+        st.write('正确')
+    else:
+        st.write('错误')
             
             
  
