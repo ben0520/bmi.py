@@ -8,7 +8,7 @@ st.write(value,'的读音：')
 
 submit_button = st.button(label='開始遊戲')    
 if submit_button: 
-     for i in dict(1): 
+     for i in dict: 
          value+=str(dict[i]) 
      st.session_state.answer=value 
 
