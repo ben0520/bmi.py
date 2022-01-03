@@ -10,14 +10,15 @@ submit_button = st.button(label='開始遊戲')
 if submit_button: 
     value=state()
     st.session_state.answer=value    
-    st.write(st.session_state.answer,'的读音：')
-    ans=dict[st.session_state.answer]
-    answer=st.sidebar.text_input('Please input 音標') 
+
+st.write(st.session_state.answer,'的读音：')
+ans=dict[st.session_state.answer]
+answer=st.sidebar.text_input('Please input 音標') 
     
-    if answer==ans:
-        st.write('正确')
-    else:
-        st.write('错误')
+if answer==ans:
+    st.write('正确')
+else:
+    st.write('错误')
             
             
  
