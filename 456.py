@@ -4,14 +4,14 @@ dict = {'あ':'a', 'い':'i', 'う':'u', 'え':'e', 'お':'o', 'か':'ka', 'き'
 def state():
     return random.choice(list(dict))
 
+st.write(st.session_state.answer,'的读音：')
+ans=dict[st.session_state.answer]
+ans=st.sidebar.text_input('Please input 音標', 'a')
+
 submit_button = st.button(label='開始遊戲')    
 if submit_button: 
     value=state()
-    st.session_state.answer=value 
-
-    st.write(st.session_state.answer,'的读音：')
-    ans=dict[st.session_state.answer]
-    ans=st.sidebar.text_input('Please input 音標', 'a')   
+    st.session_state.answer=value    
      
     if ans==st.session_state.answer:
         st.write('正确')
